@@ -1,0 +1,21 @@
+### POST request to create a book
+POST http://localhost:9001/books
+Content-Type: application/json
+
+{
+  "author": "Lyra Silverstar",
+  "title": "Northern Lights",
+  "isbn": "1234567891",
+  "price": 9.90
+}
+
+### POST bad request to create a book
+POST http://localhost:9001/books
+Content-Type: application/json
+
+{
+  "author": "Lyra Silverstar",
+  "title": "",
+  "isbn": "1234abc567891",
+  "price": 9.90
+}
