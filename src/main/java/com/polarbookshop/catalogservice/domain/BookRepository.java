@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface BookRepository extends CrudRepository<Book, Long> {
 
-
 	Optional<Book> findByIsbn(String isbn);
 
 	boolean existsByIsbn(String isbn);
