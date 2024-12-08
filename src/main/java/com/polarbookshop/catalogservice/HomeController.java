@@ -9,11 +9,11 @@ public class HomeController {
 
 	private final PolarProperties polarProperties;
 
-  public HomeController(PolarProperties polarProperties) {
-    this.polarProperties = polarProperties;
-  }
+	public HomeController(PolarProperties polarProperties) {
+		this.polarProperties = polarProperties;
+	}
 
-  @GetMapping("/")
+	@GetMapping("/")
 	public String home() {
 		return this.polarProperties.getGreeting();
 	}

@@ -29,7 +29,7 @@ public class BookService {
 
 	public Book editBookDetails(String isbn, Book book) {
 		return bookRepository.findByIsbn(isbn).map(x -> {
-			var bookToUpdate = new Book(x.isbn(), book.title(), book.author(), book.price());
+			var bookToUpdate = new Book(x.id(), x.isbn(), book.title(), book.author(), book.price(), x.publisher(), x.createdDate(), x.lastModifiedDate(), x.version());
 			return bookRepository.save(bookToUpdate);
 		}).orElseGet(() -> addBookToCatalog(book));
 	}

@@ -1,3 +1,9 @@
+### GET request to home controller
+GET http://localhost:9001/books
+
+### GET request to home controller
+GET http://localhost:9001/books/1234567892
+
 ### POST request to create a book
 POST http://localhost:9001/books
 Content-Type: application/json
