@@ -19,3 +19,9 @@ Content-Type: application/json
   "isbn": "1234abc567891",
   "price": 9.90
 }
+
+### GET request to home controller
+GET http://localhost:9001/
+
+### POST refresh config
+POST http://localhost:9001/actuator/refresh
