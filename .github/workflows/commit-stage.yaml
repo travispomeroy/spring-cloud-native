@@ -59,7 +59,7 @@ jobs:
       - name: Build contain image
         run: |
           chmod +x mvnw
-          ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:${{env.VERSION}} -Dspring-boot.build-image.publish=true -f pom.xml
+          ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:${{env.VERSION}} -f pom.xml
       - name: OCI image vulnerability scanning
         uses: anchore/scan-action@v5
         id: scan
