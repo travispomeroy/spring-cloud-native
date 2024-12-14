@@ -104,6 +104,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <imageName>${project.artifactId}:latest</imageName>
                     <image>
                         <env>
                             <BP_JVM_VERSION>21</BP_JVM_VERSION>
